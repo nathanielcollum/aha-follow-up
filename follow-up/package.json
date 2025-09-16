@@ -1,32 +1,30 @@
 {
   "name": "collum.follow-up",
   "description": "Follow-up",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": "https://github.com/nathanielcollum",
   "repository": {
     "type": "git",
-    "url": "TODO: Add the GitHub URL to your extension in package.json"
+    "url": "https://github.com/nathanielcollum/aha-follow-up"
   },
   "license": "MIT",
   "devDependencies": {
-    "@types/react": "^16.8.0"
+    "@types/react": "^16.8.0",
+    "typescript": "^5.9.2"
   },
   "ahaExtension": {
     "contributes": {
       "views": {
-        "samplePage": {
-          "title": "Sample Page",
-          "entryPoint": "src/views/samplePage.js",
-          "host": "page",
+        "followUpButton": {
+          "title": "Follow-up",
+          "entryPoint": "src/views/followUpButton.js",
+          "host": "attribute",
+          "recordTypes": [
+            "Feature"
+          ],
           "location": {
-            "menu": "Work"
+            "details": true
           }
-        }
-      },
-      "commands": {
-        "sampleCommand": {
-          "title": "Sample Command",
-          "entryPoint": "src/commands/sampleCommand.js"
         }
       }
     }
